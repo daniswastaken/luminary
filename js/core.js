@@ -1,9 +1,50 @@
 let distance;
+let unitType;
 
-document.getElementById("calculate").onclick = function() {
-    distance = document.getElementById("distance").value;
-    if (distance = 1515) {
-        window.alert("It works.");
+const speedOfLight = 299792458; // Speed of light in m/s
+
+document.getElementById('unitType').onchange = function() {
+    unitType = Number(document.getElementById('unitType').value);
+}
+
+document.getElementById('calculate').onclick = function() {
+    distance = document.getElementById('distance').value;
+    luminary();
+}
+
+async function unitCheck() {
+    if (unitType === 1) {
+        window.alert("It's kilometers");
+    } else if (unitType === 2) {
+        window.alert("It's meters");
     }
 }
 
+async function luminary() {
+    let distanceValue = parseFloat(distance)
+    let unitName
+    if (unitType === 1) {
+        unitName = 'kilometers';
+        distanceValue = distanceValue * 1000;
+    } else {
+        unitName = 'meters';
+    }
+
+    const time = distanceValue / speedOfLight; // Time in seconds
+
+    let readableTime
+
+    if (time < 1e-6) {
+        readableTime = (time * 1e9).toFixed(2) + ' nanoseconds';
+    } else if (time < 1e-3) {
+        readableTime = (time * 1e6).toFixed(2) + ' microseconds';
+    } else if (time < 1) {
+        readableTime = (time * 1e3).toFixed(2) + ' milliseconds';
+    } else if (time <= 1) {
+        readableTime = time.toFixed(3) + ' seconds';
+    } else {
+        readableTime = (time / 60).toFixed(2) + ' minutes';
+    }
+
+    document.getElementById('results').textContent = `Light takes ${readableTime} to travel ${distance} ${unitName}`
+}

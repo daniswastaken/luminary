@@ -1,19 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luminary</title>
 </head>
+
 <body>
-    
+
     <h1>Luminary</h1>
 
-    <label>Distance: </label>
+    <label>Distance:</label>
     <input id="distance">
+    
+    <select id="unitType" name="unitType">
+        <option value="1">Kilometers</option>
+        <option value="2">Meters</option>
+    </select>
+
     <button id="calculate">Calculate</button>
+
+    <p id="results">The light takes X seconds to travel Y Z.</p>
 
     <script src="./js/core.js"></script>
 
 </body>
+
 </html>
