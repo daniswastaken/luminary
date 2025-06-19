@@ -3,12 +3,18 @@ let unitType;
 
 const speedOfLight = 299792458; // Speed of light in m/s
 
+// Get the data once page loaded
+window.onload = function () {
+    unitType = Number(document.getElementById('unitType').value);
+};
+
 document.getElementById('unitType').onchange = function() {
     unitType = Number(document.getElementById('unitType').value);
 }
 
 document.getElementById('calculate').onclick = function() {
-    distance = document.getElementById('distance').value;
+    let distanceInput = document.getElementById('distance').value;
+    distance = distanceInput.trim() === "" ? 0 : Number(distanceInput);
     luminary();
 }
 
@@ -46,5 +52,5 @@ async function luminary() {
         readableTime = (time / 60).toFixed(2) + ' minutes';
     }
 
-    document.getElementById('results').textContent = `Light takes ${readableTime} to travel ${distance} ${unitName}`
+    document.getElementById('results').textContent = `Light takes ${readableTime} to travel `
 }

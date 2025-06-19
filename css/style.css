@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap");
+
+:root {
+    --white: #f9f9f9;
+    --fe-white: #fefefe;
+    --black: #090909;
+    --abs-black: #010101;
+    --light-black: #202124;
+    --yellow: #ffb22c;
+    --gray: #2e3042;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100%;
+    background-color: var(--light-black);
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.hero h1 {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 800;
+    font-size: 5rem;
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    color: var(--white);
+
+    background: linear-gradient(90deg, #FA812F 15%, #FFB22C 45%, #F3C623 65%, #FFF085 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.calculation-section {
+    color: var(--white);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+
+    margin-top: 0em;
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+.calculation-section input {
+    width: 150px;
+    color: var(--white);
+    background: none;
+    text-align: center;
+    border: none;
+    border-bottom: 3px solid var(--fe-white);
+
+    font-family: "Fira Code", monospace;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-size: 1.1rem;
+}
+
+.calculation-section input:focus {
+    outline: none;
+}
+
+.calculation-section select {
+    background-color: none;
+    border: none;
+}

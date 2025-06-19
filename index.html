@@ -5,25 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luminary</title>
+
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <h1>Luminary</h1>
+    <div id="hero" class="hero">
+        <h1>Luminary</h1>
 
-    <label>Distance:</label>
-    <input id="distance">
-    
-    <select id="unitType" name="unitType">
-        <option value="1">Kilometers</option>
-        <option value="2">Meters</option>
-    </select>
+        <div class="calculation-section">
+            <label id="results">Light takes X to travel</label>
+            <input id="distance">
+            <select id="unitType" name="unitType">
+                <option value="1">kilometers</option>
+                <option value="2">meters</option>
+            </select>
+            <button type="submit" id="calculate">Calculate</button>
+        </div>
+    </div>
 
-    <button id="calculate">Calculate</button>
 
-    <p id="results">The light takes X seconds to travel Y Z.</p>
+
 
     <script src="./js/core.js"></script>
+
 
 </body>
 
