@@ -52,5 +52,5 @@ async function luminary() {
         readableTime = (time / 60).toFixed(2) + ' minutes';
     }
 
-    document.getElementById('results').textContent = `Light takes ${readableTime} to travel `
+    document.getElementById('results').textContent = `${readableTime}`
 }
