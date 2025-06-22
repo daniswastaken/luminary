@@ -127,7 +127,7 @@ body {
 
 @media screen and (max-width: 1024px) {
     .hero h1 {
-        font-size: 4.1rem;
+        font-size: 3.8rem;
         margin-top: 0;
         margin-bottom: 2rem;
     }
@@ -137,24 +137,29 @@ body {
         flex-direction: column;
         align-items: center;
 
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
     .calculation-section label {
         text-align: center;
         max-width: 80vw;
-    }
 
-    .calculation-section input {
-        font-size: 1.4rem;
+        font-weight: 500;
     }
 
     .user-input {
         margin-top: -0.4rem;
     }
 
+    .calculation-section input {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+
+
     .calculation-section select {
-        width: 7.5rem;
+        width: 7rem;
         height: auto;
 
         font-size: 0.9rem;
