@@ -120,3 +120,50 @@ body {
 .calculation-section button:hover {
     background-color: #FFB22C;
 }
+
+@media screen and (max-width: 1024px) {
+    .hero h1 {
+        font-size: 4.1rem;
+        margin-top: 0;
+        margin-bottom: 2rem;
+    }
+
+    .calculation-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        font-size: 1.5rem;
+    }
+
+    .calculation-section label {
+        text-align: center;
+        max-width: 80vw;
+    }
+
+    .calculation-section input {
+        font-size: 1.4rem;
+    }
+
+    .user-input {
+        margin: 0;
+    }
+
+    .calculation-section select {
+        width: 7.5rem;
+        height: 2rem;
+
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    .calculation-section button {
+        margin-top: 6rem;
+
+        width: 10rem;
+        height: 3rem;
+
+        font-size: 1.2rem;
+        font-weight: 900;
+    }
+}
