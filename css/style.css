@@ -150,12 +150,12 @@ body {
     }
 
     .user-input {
-        margin: 0;
+        margin-top: -0.4rem;
     }
 
     .calculation-section select {
         width: 7.5rem;
-        height: 2rem;
+        height: auto;
 
         font-size: 0.9rem;
         text-align: center;
