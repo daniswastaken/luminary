@@ -62,6 +62,12 @@ body {
     font-size: 1.5rem;
 }
 
+.user-input {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
 .calculation-section .results-section {
     color: #FFB22C;
 }
@@ -101,8 +107,6 @@ body {
 }
 
 .calculation-section button {
-    margin-left: 0.5rem;
-
     height: 1.5rem;
     width: 6rem;
 
