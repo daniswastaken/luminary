@@ -1,2 +1,2 @@
 # Luminary
-Calculate how fast light will travel for x distances.
+A web app to calculate how long it takes for light to travel x distances.
